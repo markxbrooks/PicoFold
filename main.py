@@ -11,7 +11,10 @@ def run_esmfold(sequence: str, output_pdb: str = "output.pdb"):
     model = model.to(device)
     model.eval()
     sequence = clean_sequence(sequence)
-    inputs = tokenizer(sequence, return_tensors="pt").to(device)
+    # ESMFold expects raw residue tokens only; special tokens (CLS/SEP) break af2_to_esm indexing.
+    inputs = tokenizer(
+        sequence, return_tensors="pt", add_special_tokens=False
+    ).to(device)
 
     with torch.no_grad():
         outputs = model(**inputs)
