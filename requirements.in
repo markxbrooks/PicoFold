@@ -1,0 +1,8 @@
+# pip-compile
+# pip-sync
+biopython
+fair-esm
+pip-tools
+torch
+torchvision
+torchaudio
