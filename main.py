@@ -1,3 +1,9 @@
+"""
+This module provides functionality for protein folding using ESMFold. It processes
+input protein sequences, validates their content, cleans invalid amino acids, and
+executes folding operations to generate PDB files as output.
+"""
+
 from transformers import AutoTokenizer, EsmForProteinFolding
 import torch
 
@@ -13,8 +19,18 @@ def run_esmfold(sequence: str, output_pdb: str = "output.pdb"):
     sequence = clean_sequence(sequence)
     # ESMFold expects raw residue tokens only; special tokens (CLS/SEP) break af2_to_esm indexing.
     inputs = tokenizer(
+        sequence,
+        return_tensors="pt",
+        add_special_tokens=False
+    )
+
+    inputs = {
+        k: v.to(device=device, dtype=torch.long if k == "input_ids" else None)
+        for k, v in inputs.items()
+    }
+    """inputs = tokenizer(
         sequence, return_tensors="pt", add_special_tokens=False
-    ).to(device)
+    ).to(device)"""
 
     with torch.no_grad():
         outputs = model(**inputs)
