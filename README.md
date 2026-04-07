@@ -25,18 +25,21 @@ Protein folding is the process by which amino acid chains fold into their native
 ### Quick Start
 
 1. **Clone the repository**
-   ```bash
+```bash
    git clone https://github.com/markxbrooks/PicoFold.git
    cd PicoFold
+```
 Install dependencies
 
-bash
-pip install -r requirements.txt
+```bash
+    pip install -r requirements.txt
+```
 Or use pip-tools for better dependency management:
 
-bash
-pip install pip-tools
-pip-sync requirements.txt
+```bash
+    pip install pip-tools
+    pip-sync requirements.txt
+```
 Dependencies
 torch: Deep learning framework
 torchvision: Vision utilities for PyTorch
@@ -46,36 +49,45 @@ biopython: Bioinformatics toolkit
 transformers: Pre-trained model library
 Usage
 Basic Example
-Python
+```python
 from main import run_esmfold
-
+```
 # Define your protein sequence (amino acids)
+```python
 sequence = "MGSSHHHHHHSSGLVPRGSHM"
-
+```
 # Run the folding prediction
+```python
 run_esmfold(sequence, output_pdb="my_protein.pdb")
+```
 Advanced Usage
-Python
-from main import run_esmfold, clean_sequence, validate_sequence
+```python
+    from main import run_esmfold, clean_sequence, validate_sequence
+```
 
 # Your protein sequence
+```python
 sequence = "ACDEFGHIKLMNPQRSTVWY"
-
+```
 # Clean the sequence (removes invalid characters)
+```python
 cleaned = clean_sequence(sequence)
-
+```
 # Validate the sequence
+```python
 validate_sequence(cleaned)
-
+```
 # Run ESMFold
-run_esmfold(cleaned, output_pdb="output.pdb")
+```python
+    run_esmfold(cleaned, output_pdb="output.pdb")
+```
 Output
 The pipeline generates a PDB file (Protein Data Bank format) containing:
 
-Atomic coordinates of the predicted structure
-Confidence scores per residue
-Secondary structure information
-View the output with molecular visualization tools like:
+- Atomic coordinates of the predicted structure
+- Confidence scores per residue
+- Secondary structure information
+- View the output with molecular visualization tools like:
 
 PyMOL
 Chimera
@@ -96,18 +108,23 @@ Cleans invalid amino acids from a sequence by replacing them with Alanine (A).
 
 Parameters:
 
-seq (str): Input amino acid sequence
+```python
+    seq (str): # Input amino acid sequence
+```
 Returns: Cleaned sequence string
 
-validate_sequence(seq: str)
+```python
+    validate_sequence(seq: str)
+```
 Validates that a sequence contains only valid amino acids.
 
 Parameters:
-
-seq (str): Amino acid sequence to validate
+```python
+    seq (str): Amino acid sequence to validate
+```
 Raises: ValueError if invalid amino acids are found
 
-Supported Amino Acids
+# Supported Amino Acids
 PicoFold supports all 20 standard amino acids:
 
 Letter	Amino Acid	Letter	Amino Acid
@@ -122,24 +139,25 @@ I	Isoleucine	W	Tryptophan
 K	Lysine	Y	Tyrosine
 L	Leucine		
 M	Methionine		
-Performance Notes
+# Performance Notes
 ESMFold is faster than AlphaFold2 while maintaining competitive accuracy
 CPU-only inference is slower than GPU-accelerated prediction but requires no specialized hardware
 Typical folding time depends on sequence length and system specifications
 For production use with many sequences, consider GPU acceleration (modify device selection in main.py)
 Project Structure
-Code
-PicoFold/
-├── main.py                 # Core protein folding module
-├── requirements.in         # High-level dependencies
-├── requirements.txt        # Pinned dependency versions
-├── output.pdb             # Example output file
-├── README.md              # This file
-└── LICENSE                # MIT License
-License
+```bash
+    PicoFold/
+    ├── main.py                 # Core protein folding module
+    ├── requirements.in         # High-level dependencies
+    ├── requirements.txt        # Pinned dependency versions
+    ├── output.pdb             # Example output file
+    ├── README.md              # This file
+    └── LICENSE                # MIT License
+```
+# License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-References
+# References
 ESMFold Paper
 Hugging Face Transformers
 PyTorch Documentation
@@ -147,7 +165,7 @@ BioPython
 Contributing
 Contributions are welcome! Please feel free to submit pull requests or open issues for bugs and feature requests.
 
-Acknowledgments
+# Acknowledgments
 Meta AI for the ESMFold model
 Hugging Face for the transformers library
 PyTorch team for the deep learning framework
