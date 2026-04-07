@@ -1,5 +1,7 @@
 # PicoFold
 
+![Picofold Logo](resources/PicoFold_logo_640.png)
+
 A lightweight, CPU-only protein folding pipeline powered by ESMFold. PicoFold enables fast and efficient protein structure prediction without requiring GPU resources, making it accessible for researchers and developers with standard computing hardware.
 
 ## Features
