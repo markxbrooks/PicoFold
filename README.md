@@ -43,12 +43,12 @@ Or use pip-tools for better dependency management:
     pip-sync requirements.txt
 ```
 # Dependencies
-- **torch: Deep learning framework
-- **torchvision: Vision utilities for PyTorch
-- **torchaudio: Audio processing for PyTorch
-- **fair-esm: Meta's ESMFold model
-- **biopython: Bioinformatics toolkit
-- **transformers: Pre-trained model library
+- torch: Deep learning framework
+- torchvision: Vision utilities for PyTorch
+- torchaudio: Audio processing for PyTorch
+- fair-esm: Meta's ESMFold model
+- biopython: Bioinformatics toolkit
+- transformers: Pre-trained model library
 # Usage
 Basic Example
 ```python
@@ -91,10 +91,10 @@ The pipeline generates a PDB file (Protein Data Bank format) containing:
 - Secondary structure information
 - View the output with molecular visualization tools like:
 
-- **PyMOL
-- **Chimera
-- **Jmol
-- **Online viewers (PyMOL web, 3Dmol.org)
+- PyMOL
+- Chimera
+- Jmol
+- Online viewers (PyMOL web, 3Dmol.org)
 # API Reference
 ```python
    run_esmfold(sequence: str, output_pdb: str = "output.pdb")
@@ -131,23 +131,24 @@ Raises: ValueError if invalid amino acids are found
 # Supported Amino Acids
 PicoFold supports all 20 standard amino acids:
 
-Letter	Amino Acid	Letter	Amino Acid
-A	Alanine	N	Asparagine
-C	Cysteine	P	Proline
-D	Aspartic acid	Q	Glutamine
-E	Glutamic acid	R	Arginine
-F	Phenylalanine	S	Serine
-G	Glycine	T	Threonine
-H	Histidine	V	Valine
-I	Isoleucine	W	Tryptophan
-K	Lysine	Y	Tyrosine
-L	Leucine		
-M	Methionine		
+| Letter | Amino Acid      | Letter | Amino Acid      |
+|--------|-----------------|--------|-----------------|
+| A      | Alanine         | N      | Asparagine      |
+| C      | Cysteine        | P      | Proline         |
+| D      | Aspartic acid   | Q      | Glutamine       |
+| E      | Glutamic acid   | R      | Arginine        |
+| F      | Phenylalanine   | S      | Serine          |
+| G      | Glycine         | T      | Threonine       |
+| H      | Histidine       | V      | Valine          |
+| I      | Isoleucine      | W      | Tryptophan      |
+| K      | Lysine          | Y      | Tyrosine        |
+| L      | Leucine         |        |                 |
+| M      | Methionine      |        |                 |
 # Performance Notes
-- **ESMFold is faster than AlphaFold2 while maintaining competitive accuracy
-- **CPU-only inference is slower than GPU-accelerated prediction but requires no specialized hardware
-- **Typical folding time depends on sequence length and system specifications
-- **For production use with many sequences, consider GPU acceleration (modify device selection in main.py)
+- ESMFold is faster than AlphaFold2 while maintaining competitive accuracy
+- CPU-only inference is slower than GPU-accelerated prediction but requires no specialized hardware
+- Typical folding time depends on sequence length and system specifications
+- For production use with many sequences, consider GPU acceleration (modify device selection in main.py)
 # Project Structure
 ```bash
     PicoFold/
@@ -162,14 +163,14 @@ M	Methionine
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 # References
-- **ESMFold Paper
-- **Hugging Face Transformers
-- **PyTorch Documentation
-- **BioPython
+- ESMFold Paper
+- Hugging Face Transformers
+- PyTorch Documentation
+- BioPython
 # Contributing
 Contributions are welcome! Please feel free to submit pull requests or open issues for bugs and feature requests.
 
 # Acknowledgments
-- **Meta AI for the ESMFold model
-- **Hugging Face for the transformers library
+- Meta AI for the ESMFold model
+- Hugging Face for the transformers library
 - **PyTorch team for the deep learning framework
