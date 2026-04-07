@@ -83,7 +83,7 @@ validate_sequence(cleaned)
 ```python
     run_esmfold(cleaned, output_pdb="output.pdb")
 ```
-Output
+# Output
 The pipeline generates a PDB file (Protein Data Bank format) containing:
 
 - Atomic coordinates of the predicted structure
@@ -173,4 +173,4 @@ Contributions are welcome! Please feel free to submit pull requests or open issu
 # Acknowledgments
 - Meta AI for the ESMFold model
 - Hugging Face for the transformers library
-- **PyTorch team for the deep learning framework
+- PyTorch team for the deep learning framework
