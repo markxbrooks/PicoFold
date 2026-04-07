@@ -42,14 +42,14 @@ Or use pip-tools for better dependency management:
     pip install pip-tools
     pip-sync requirements.txt
 ```
-Dependencies
-torch: Deep learning framework
-torchvision: Vision utilities for PyTorch
-torchaudio: Audio processing for PyTorch
-fair-esm: Meta's ESMFold model
-biopython: Bioinformatics toolkit
-transformers: Pre-trained model library
-Usage
+# Dependencies
+- **torch: Deep learning framework
+- **torchvision: Vision utilities for PyTorch
+- **torchaudio: Audio processing for PyTorch
+- **fair-esm: Meta's ESMFold model
+- **biopython: Bioinformatics toolkit
+- **transformers: Pre-trained model library
+# Usage
 Basic Example
 ```python
 from main import run_esmfold
@@ -91,12 +91,14 @@ The pipeline generates a PDB file (Protein Data Bank format) containing:
 - Secondary structure information
 - View the output with molecular visualization tools like:
 
-PyMOL
-Chimera
-Jmol
-Online viewers (PyMOL web, 3Dmol.org)
-API Reference
-run_esmfold(sequence: str, output_pdb: str = "output.pdb")
+- **PyMOL
+- **Chimera
+- **Jmol
+- **Online viewers (PyMOL web, 3Dmol.org)
+# API Reference
+```python
+   run_esmfold(sequence: str, output_pdb: str = "output.pdb")
+```
 Predicts protein structure from an amino acid sequence.
 
 Parameters:
@@ -160,14 +162,14 @@ Project Structure
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 # References
-ESMFold Paper
-Hugging Face Transformers
-PyTorch Documentation
-BioPython
-Contributing
+- **ESMFold Paper
+- **Hugging Face Transformers
+- **PyTorch Documentation
+- **BioPython
+# Contributing
 Contributions are welcome! Please feel free to submit pull requests or open issues for bugs and feature requests.
 
 # Acknowledgments
-Meta AI for the ESMFold model
-Hugging Face for the transformers library
-PyTorch team for the deep learning framework
+- **Meta AI for the ESMFold model
+- **Hugging Face for the transformers library
+- **PyTorch team for the deep learning framework
