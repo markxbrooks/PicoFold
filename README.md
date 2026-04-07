@@ -144,11 +144,11 @@ K	Lysine	Y	Tyrosine
 L	Leucine		
 M	Methionine		
 # Performance Notes
-ESMFold is faster than AlphaFold2 while maintaining competitive accuracy
-CPU-only inference is slower than GPU-accelerated prediction but requires no specialized hardware
-Typical folding time depends on sequence length and system specifications
-For production use with many sequences, consider GPU acceleration (modify device selection in main.py)
-Project Structure
+- **ESMFold is faster than AlphaFold2 while maintaining competitive accuracy
+- **CPU-only inference is slower than GPU-accelerated prediction but requires no specialized hardware
+- **Typical folding time depends on sequence length and system specifications
+- **For production use with many sequences, consider GPU acceleration (modify device selection in main.py)
+# Project Structure
 ```bash
     PicoFold/
     ├── main.py                 # Core protein folding module
