@@ -22,7 +22,7 @@ Protein folding is the process by which amino acid chains fold into their native
 ### Prerequisites
 
 - Python 3.11 or higher
-- pip or conda package manager
+- pip or uv package manager
 
 ### Quick Start
 
@@ -30,6 +30,11 @@ Protein folding is the process by which amino acid chains fold into their native
 ```bash
    git clone https://github.com/markxbrooks/PicoFold.git
    cd PicoFold
+   python3.11 -m venv .venv
+   # Windows
+   .venv/Scripts/bin/activate
+   # Linux
+   source .venv/bin/activate
 ```
 Install dependencies
 
