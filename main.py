@@ -4,8 +4,9 @@ input protein sequences, validates their content, cleans invalid amino acids, an
 executes folding operations to generate PDB files as output.
 """
 
-from transformers import AutoTokenizer, EsmForProteinFolding
 import torch
+from transformers import AutoTokenizer, EsmForProteinFolding
+
 
 def run_esmfold(sequence: str, output_pdb: str = "output.pdb"):
     model_name = "facebook/esmfold_v1"

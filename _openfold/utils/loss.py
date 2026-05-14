@@ -1,5 +1,6 @@
 import torch
 
+
 def compute_predicted_aligned_error(*args, **kwargs):
     return {}
 
